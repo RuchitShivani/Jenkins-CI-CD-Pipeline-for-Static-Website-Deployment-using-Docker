@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Copy Files') {
+            steps {
+                bat 'xcopy /Y /E C:\\Users\\Ruchit\\html-site C:\\jenkins-html-site\\'
+            }
+        }
+        
+        stage('Docker Build') {
+            steps {
+                dir('C:\\jenkins-html-site') {
+                    bat 'docker build -t my-html-app .'
+                }
+            }
+        }
+        
+        stage('Docker Run') {
+            steps {
+                dir('C:\\jenkins-html-site') {
+                    bat 'docker run -d -p 8089:80 my-html-app'
+                }
+            }
+        }
+    }
+}
