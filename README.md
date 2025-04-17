@@ -43,9 +43,8 @@ Automate the build and deployment process of a basic static website using:
 
 - Website successfully deployed inside a Docker container.
 - Accessible locally at:  
-  [http://localhost:8090](http://localhost:8090)
+  [http://localhost:8089]
+![Screenshot 2025-04-17 184852](https://github.com/user-attachments/assets/405988b5-32f2-4e3d-954f-eb7bd998bf20)
 
 ---
-
-## 📂 Project Structure
 
